@@ -26,6 +26,11 @@ $ npm start
 5) Restart game feature on host side
 6) No database reqired
 
+### Hidden Feature
+1) Players can create their custom game codes by putting secret pin in Join Game code box and create the game.
+2) Open config.bin file in any text editor to manage custom game codes.
+3) Pin and game codes must start with alphabet and can only contain alphanumerical values.
+
 ## How to play
 1) One player create the game with **Create Game** button.
 2) Other player join the game with generated game code.
