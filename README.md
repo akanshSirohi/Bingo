@@ -35,3 +35,11 @@ $ npm start
 1) One player create the game with **Create Game** button.
 2) Other player join the game with generated game code.
 3) Enjoy the game.
+
+## Screenshots
+
+<img src="screenshots/ss1.png?raw=true" alt="Screenshot 1">
+<img src="screenshots/ss2.png?raw=true" alt="Screenshot 2">
+<img src="screenshots/ss3.png?raw=true" alt="Screenshot 3">
+<img src="screenshots/ss4.png?raw=true" alt="Screenshot 4">
+<img src="screenshots/ss5.png?raw=true" alt="Screenshot 5">
