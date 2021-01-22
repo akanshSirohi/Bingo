@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "debug": "nodemon app.js",
-    "deploy": "cd.. && DeployBingo.bat"
+    "deploy": "git add . && git commit -am \"Small Change...\" && git push heroku master"
   },
   "author": "Akansh Sirohi",
   "license": "ISC",
