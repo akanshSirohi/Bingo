@@ -425,6 +425,7 @@
         }
       }
     });
+
     socket.on("clientConnected", (flg) => {
       // Client
       if (flg == "true") {
@@ -440,6 +441,7 @@
       }
       console.log(flg);
     });
+
     socket.on("partnerConnected", (flg) => {
       // host
       $("#game").show();
