@@ -2,7 +2,7 @@
 Bingo online dual player game in NodeJS.
 
 ## Live Demo
-https://multi-bingo.herokuapp.com
+https://online-bingo.onrender.com
 
 ## Instructions to run
 
