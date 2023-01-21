@@ -6,8 +6,8 @@ app.use(expressLayouts);
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 const port = process.env.PORT || 3000;
-global.baseurl = `http://localhost:${port}`;
-// global.baseurl = "https://multi-bingo.herokuapp.com";
+// global.baseurl = `http://localhost:${port}`;
+global.baseurl = "https://online-bingo.onrender.com";
 app.use("/", require("./routes/index"));
 const cors = require("cors");
 app.use(cors());
@@ -17,7 +17,7 @@ let gameSockets = [];
 
 const genUniqueCode = () => {
   let x = Math.random().toString(36).slice(6);
-  x = "a" + x.toLowerCase().substr(0, 6);
+  x = "a" + x.toLowerCase().slice(0, 6);
   if (gameCodes.includes(x)) {
     return genUniqueCode();
   } else {

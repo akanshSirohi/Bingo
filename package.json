@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "debug": "nodemon app.js",
-    "deploy": "git add . && git commit -am \"Small Change...\" && git push heroku master"
+    "debug": "nodemon app.js"
   },
   "author": "Akansh Sirohi",
   "license": "ISC",
