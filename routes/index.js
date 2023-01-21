@@ -2,6 +2,12 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
+  let hostname = req.hostname;
+  if(hostname == "localhost") {
+    global.baseurl = `http://localhost:${port}`;
+  }else{
+    global.baseurl = `https://${hostname}`;
+  }
   res.render("index");
 });
 

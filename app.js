@@ -6,8 +6,7 @@ app.use(expressLayouts);
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 const port = process.env.PORT || 3000;
-// global.baseurl = `http://localhost:${port}`;
-global.baseurl = "https://online-bingo.onrender.com";
+global.port = port;
 app.use("/", require("./routes/index"));
 const cors = require("cors");
 app.use(cors());
@@ -55,19 +54,13 @@ const initListenes = (soc) => {
       code = genUniqueCode();
     } else {
       let flg = true;
-      let config = fs.readFileSync("config.bin", "utf8");
-      config = config.replace(/(\r\n|\n|\r)/gm, "");
-      config = config.split(";");
-      for (let i = 0; i < config.length; i++) {
-        if (config[i].length > 0) {
-          let x = config[i].split("=");
-          if (x[0] === pin) {
-            if (!gameCodes.includes(x[1])) {
-              code = x[1];
-              flg = false;
-            }
-            break;
-          }
+      let config = fs.readFileSync("config.json", "utf8");
+      let g_codes = JSON.parse(config);
+      for(const gcode in g_codes) {
+        if(gcode === pin && !gameCodes.includes(g_codes[gcode])) {
+          code = g_codes[gcode];
+          flg = false;
+          break;
         }
       }
       if (flg) {
